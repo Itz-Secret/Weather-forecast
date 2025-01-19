@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/023/133/298/small/dark-blue-texture-with-cloudy-sky-vector.jpg);
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack header and content */
+  height: 100vh; /* Full viewport height */
+}
+
+header {
+  background-color: #0d0c1d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align vertically */
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.ntg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search {
+  margin: 10px;
+  border-radius: 50px;
+  padding: 10px 15px;
+  height: auto;
+}
+
+header img {
+  margin: 10px;
+  width: 50px;
+}
+
+.content {
+  font-family: "Roboto", serif;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  justify-content: center;
+  align-items: center;
+  height: 85vh; /* Adjust for header height */
+  padding: 10px;
+}
+
+.find-city {
+  width: 90%; /* Adjust for responsiveness */
+  text-align: center; /* Center align the text inside the div */
+  margin: 10px 0;
+}
+
+.content p {
+  padding: 20px 0;
+}
+
+.weather-card {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px #0d0c1d;
+  width: 90%; /* Full width for smaller screens */
+  max-width: 400px; /* Limit the maximum width */
+  margin: 10px;
+  padding: 20px;
+}
+
+.one,
+.two,
+.three {
+  padding: 10px;
+  text-align: center;
+}
+
+.two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three {
+  padding: 20px;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    flex-direction: row; /* Change to row layout for larger screens */
+    justify-content: space-evenly;
+  }
+
+  .find-city {
+    width: 700px; /* Original width for larger screens */
+  }
+
+  .weather-card {
+    width: 300px; /* Smaller width for large layouts */
+    max-width: none; /* Remove max width */
+  }
+}
