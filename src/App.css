@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,48 +18,38 @@ header {
   background-color: #0d0c1d;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align vertically */
-  padding: 10px 20px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.ntg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 header h1 {
+  width: 500px;
   color: whitesmoke;
-  font-size: 1.5rem;
-  text-align: center;
+  padding: 15px;
 }
 
 .search {
-  margin: 10px;
+  margin: auto 50px;
   border-radius: 50px;
-  padding: 10px 15px;
-  height: auto;
+  padding: 15px;
+  height: 20px;
 }
 
 header img {
   margin: 10px;
+  float: left;
   width: 50px;
 }
 
 .content {
   font-family: "Roboto", serif;
   display: flex;
-  flex-direction: column; /* Stack elements vertically on small screens */
-  justify-content: center;
-  align-items: center;
-  height: 85vh; /* Adjust for header height */
-  padding: 10px;
+  justify-content: space-evenly; /* Center align horizontally */
+  align-items: center; /* Center align vertically */
+  height: 85vh; /* Make sure the container takes full viewport height */
 }
 
 .find-city {
-  width: 90%; /* Adjust for responsiveness */
+  width: 700px;
   text-align: center; /* Center align the text inside the div */
-  margin: 10px 0;
 }
 
 .content p {
@@ -69,48 +58,52 @@ header img {
 
 .weather-card {
   background-color: whitesmoke;
+
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px #0d0c1d;
-  width: 90%; /* Full width for smaller screens */
-  max-width: 400px; /* Limit the maximum width */
-  margin: 10px;
+}
+
+.one {
   padding: 20px;
 }
-
-.one,
-.two,
-.three {
-  padding: 10px;
-  text-align: center;
-}
-
 .two {
+  /* grid-column-start: 2;
+  grid-row-start:1;
+  grid-row-end:3; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .three {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
   padding: 20px;
 }
 
-/* Media queries for responsive design */
-@media (min-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+@media (max-width: 984px) {
+  .content {
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search {
+    display: none;
   }
 
-  .content {
-    flex-direction: row; /* Change to row layout for larger screens */
-    justify-content: space-evenly;
+  .ntg {
+    width: 100%;
+  }
+
+  header h1 {
+    width: 100%;
+    color: whitesmoke;
+    padding: 15px;
   }
 
   .find-city {
-    width: 700px; /* Original width for larger screens */
-  }
-
-  .weather-card {
-    width: 300px; /* Smaller width for large layouts */
-    max-width: none; /* Remove max width */
+    width: 100%;
+    text-align: center; /* Center align the text inside the div */
   }
 }
